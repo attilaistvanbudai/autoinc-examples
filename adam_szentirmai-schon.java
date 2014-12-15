@@ -19,27 +19,27 @@
  */
 
 public int solution(final String S) {
-    char[] input = S.toCharArray();
+    char[] input = S.toCharArray(); //LOCK
     Deque<Character> stack = new ArrayDeque<>();
     for (int i = 0; i < input.length; i++) {
         char ch = input[i];
         switch (ch) { //LOCK
-            case '(':
-            case '[':
-            case '{':
+            case '(': //LOCK
+            case '[': //LOCK
+            case '{': //LOCK
                 stack.addFirst(ch);
                 break;
-            case ')':
+            case ')': //LOCK
                 if (!(stack.size() > 0 && '(' == stack.pop())) {
                     return 0;
                 }
                 break;
-            case ']':
+            case ']': //LOCK
                 if (!(stack.size() > 0 && stack.pop() == '[')) {
                     return 0;
                 }
                 break;
-            case '}':
+            case '}': //LOCK
                 if (!(stack.size() > 0 && stack.pop() == '{')) {
                     return 0;
                 }
