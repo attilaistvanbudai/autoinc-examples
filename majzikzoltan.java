@@ -11,7 +11,7 @@
         return //
         (number != 0) //
         ? //
-        Math.abs(number % 10) //
+        Math.abs(number % 10) //LOCK
         + //
         sumOfDigits(number / 10)//
         : //
@@ -28,7 +28,7 @@
 
     public static Integer sumOfDigitsNonRecursive(int number) {
         number = Math.abs(number);
-        int sum = 0;
+        int sum = 0; //LOCK
         while (number != 0) {
             sum += number % 10;
             number = number / 10;
