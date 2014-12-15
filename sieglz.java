@@ -14,16 +14,16 @@ pass? Which are open, which are closed?
 */
 
 public static Boolean[] answer() {
-	Boolean[] result = new Boolean[100];
+    Boolean[] result = new Boolean[100];
     for (Integer i = 0; i < 100; ++i) {
         result[i] = false;
     }
 
-	for (Integer i = 1; i <= 100; ++i) {
-		for (Integer j = i; j <= 100; j = j + i) {
-			result[j-1] = !result[j-1];
-		}
-	}
+    for (Integer i = 1; i <= 100; ++i) {
+        for (Integer j = i; j <= 100; j = j + i) {
+            result[j-1] = !result[j-1];
+        }
+    }
 
-	return result;
+    return result;
 }
